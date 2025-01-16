@@ -1,23 +1,16 @@
+{{-- resources/views/home.blade.php --}}
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
+<div class="card-dashboard d-flex flex-column justify-content-center align-items-center">
+    {{-- Sezione centrata verticalmente/orizzontalmente --}}
+    <div class="card p-5 text-center animate__animated animate__fadeIn"
+         style="max-width: 600px; width: 100%; background-color: #1e1e1e; border-color: #2b2b2b;">
+        <h1 class="mb-4" style="font-weight: 700;">Benvenuto nel mio Portfolio</h1>
+        <p class="lead mb-4">
+            Qui potrai scoprire i miei progetti e, se accedi,<br>
+            gestirli dall’area Admin.
+        </p>
     </div>
 </div>
 @endsection
